@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# 🖼️ Image CRUD SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite + TypeScript single-page application for uploading, searching, listing, and deleting images. Built using TailwindCSS and json-server.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📤 Upload images (only `.jpg`, `.png`, etc.)
+- 🔍 Search images by name
+- 🖼️ Display images in a responsive grid layout
+- ❌ Delete individual images
+- ✅ Clean UI with TailwindCSS
+- ⚡ Fast dev experience with Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🧪 Tech Stack
+
+- **React** (with Vite)
+- **TypeScript**
+- **TailwindCSS**
+- **Axios**
+- **json-server** (mock API)
+
+---
+
+## 📦 Installation & Running
+
+```bash
+npm install
+npm run server     # starts json-server at http://localhost:5000
+npm start        # starts Vite frontend at http://localhost:3000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Ensure db.json (or images.json) exists at src/data/images.json with the following structure:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+{
+"images": []
+}
+
+## 📝 Notes
+
+✅ All functionality completed as requested in the assessment
+
+- ⏱ Time taken: ~5 hours
+
+🧹 If given more time:
+
+- Add image preview before upload
+- Add toast notifications (success/error)
+- Add update (edit image name) functionality
